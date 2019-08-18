@@ -1,0 +1,25 @@
+overwrite: true
+schema: "./schema.graphql"
+documents: "./operations/*.gql"
+generates:
+  ./types.ts:
+    plugins:
+      - typescript
+    config:
+      avoidOptionals: true
+      immutableTypes: true
+      preResolveTypes: true
+  ./operations/:
+    preset: near-operation-file
+    presetConfig:
+      extension: .graphql.tsx
+      baseTypesPath: ../types
+    plugins:
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      hooksImportFrom: "@apollo/react-hooks"
+      immutableTypes: true
+      preResolveTypes: true
+      withHOC: false
+      withHooks: true

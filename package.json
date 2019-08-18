@@ -1,0 +1,26 @@
+{
+  "name": "codegen-foo",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@apollo/react-hooks": "^3.0.1",
+    "apollo-client": "^2.6.4",
+    "graphql": "^14.4.2",
+    "react": "^16.9.0",
+    "react-apollo": "^3.0.1"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^1.6.1",
+    "@graphql-codegen/near-operation-file-preset": "^1.6.1",
+    "@graphql-codegen/typescript": "^1.6.1",
+    "@graphql-codegen/typescript-operations": "^1.6.1",
+    "@graphql-codegen/typescript-react-apollo": "^1.6.1",
+    "@types/graphql": "^14.2.3",
+    "@types/react": "^16.9.2",
+    "typescript": "^3.5.3"
+  },
+  "scripts": {
+    "compile": "graphql-codegen && tsc"
+  }
+}

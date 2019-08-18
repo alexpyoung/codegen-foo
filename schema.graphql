@@ -1,0 +1,17 @@
+type Foo {
+    bar: Bar!
+}
+
+enum Bar {
+    FOO
+    BAR
+    BAZ
+}
+
+type Query {
+    foo: Foo!
+}
+
+schema {
+    query: Query
+}
